@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hitungzakat.kyald.com.hitungzakat.Fragments.ZakatFitrah">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <TextView
+        android:text="Hitung Zakat Fitrah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:textColor="@color/colorPrimary" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:id="@+id/inidulu"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="0.5dp" />
+
+
+    <Button
+        android:text="Hitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@+id/input_layout_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:layout_margin="20dp"
+        android:textColor="#fff" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inidulu"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/input_harga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColorHint="@color/colorPrimary"
+            android:hint="Harga beras (liter)"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>
