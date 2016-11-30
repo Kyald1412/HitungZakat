@@ -20,7 +20,7 @@ import hitungzakat.kyald.com.hitungzakat.R;
 public class ZakatFitrah extends Fragment {
 
     View v;
-    EditText editText;
+    EditText editText,edtorang;
 
     public ZakatFitrah() {
         // Required empty public constructor
@@ -47,6 +47,7 @@ public class ZakatFitrah extends Fragment {
         v = inflater.inflate(R.layout.fragment_zakat_fitrah, container, false);
 
         editText = (EditText) v.findViewById(R.id.input_harga);
+        edtorang = (EditText) v.findViewById(R.id.input_orang);
 
         Button btn_hasil = (Button) v.findViewById(R.id.button);
 
@@ -79,10 +80,10 @@ public class ZakatFitrah extends Fragment {
                     TextView title = (TextView) dialog.findViewById(R.id.textView8);
                     Button btn_done = (Button) dialog.findViewById(R.id.btn_done);
 
-                    double hasil = (3.5 * Integer.valueOf(String.valueOf(editText.getText())));
+                    double hasil = (3.5 * Integer.valueOf(String.valueOf(edtorang.getText())) * Integer.valueOf(String.valueOf(editText.getText())));
 
-                    token_text.setText("Rp. "+String.valueOf(Integer.valueOf((int) hasil)));
-                    title.setText("Rumus : 3.5 x Harga beras (liter)");
+                    token_text.setText("Rp. "+String.valueOf(Integer.valueOf((int) hasil) ));
+                    title.setText("Rumus : 3.5 x Jumlah orang x Harga beras (liter)");
 
 
 
